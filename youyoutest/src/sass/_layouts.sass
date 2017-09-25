@@ -18,10 +18,10 @@ header
   background-image: url('/img/bg_header.png')
   background-size: 100% 100%
 
-.header-logo img
+.header__logo img
   margin-top: 25px
 
-.header-xxl-menu
+.header__nav
   float: right
   margin-top: 55px
   ul li
@@ -42,10 +42,10 @@ header
 
 /*menu
 
-.xs-menu
+.header__xs__menu
   display: none
 
-#menu-burger
+.header__xs__menu__burger
   width: 50px
   height: 50px
   background: #FF8C26
@@ -56,7 +56,7 @@ header
   cursor: pointer
   z-index: 200
 
-.menu-icon
+.header__xs__menu__burger__icon
   display: block
   height: 2px
   width: 18px
@@ -100,7 +100,7 @@ header
       margin-top: -1px
       background: #000
 
-#menu-burger.open, .menu-icon.open
+.header__xs__menu__burger.open, .header__xs__menu__burger__icon.open
   background: #fff
 
 #overlay-menu
@@ -116,7 +116,7 @@ header
   &.open
     right: 0%
 
-.overlay-menu-nav
+.header__xs__menu__nav
   height: 60%
   position: relative
   top: 50%
@@ -151,18 +151,18 @@ header
 
 /*headerBlock
 
-.header-info
+.header__info
   width: 50%
   float: left
   margin-top: 235px
 
-.header-info-h3
+.header__info__title
   font-size: 35px
   font-family: "Roboto" , sans-serif
   color: rgb(255, 255, 255)
   letter-spacing: 0.5px
 
-.header-info-p
+.header__info__text
   margin-top: 43px
   margin-bottom: 89px
   font-size: 20px
@@ -170,7 +170,7 @@ header
   color: rgb(255, 255, 255)
   line-height: 1.8
 
-.big-button
+.big__button
   font-size: 18px
   font-family: "HelveticaNeue" , sans-serif
   color: rgb(255, 255, 255)
@@ -193,7 +193,7 @@ header
     -o-transition: 0.6s
     transition: 0.6s
 
-.headerImage
+.header__image
   margin-top: 122px
   margin-bottom: 95px
   width: 300px
@@ -204,19 +204,19 @@ header
 
 /*worksBlock
 
-.works-block
+.works
   width: 100%
   background-color: white
   padding-top: 100px
   padding-bottom: 100px
 
-.h1
+.works__h1
   text-align: center
   font-size: 34px
   font-family: "Roboto" , sans-serif
   color: rgb(52, 52, 52)
 
-.subtitle
+.works__subtitle
   text-align: center
   color: rgb(255, 132, 0)
   font-size: 18px
@@ -224,7 +224,7 @@ header
   text-transform: uppercase
   margin-bottom: 10px
 
-.works-info-block
+.works__info
   width: 31%
   float: left
   margin-right: 3.5%
@@ -233,12 +233,12 @@ header
   &:nth-child(3n+2)
     margin-right: 0px
 
-.works-info-block-img
+.works__info__img
   display: block
   width: 40%
   margin: 0 auto
 
-.works-info-block-p--title
+.works__info__p_title
   color: rgb(52, 52, 52)
   font-weight: 600
   margin-top: 50px
@@ -249,16 +249,16 @@ header
     &:hover
       color: rgb(92, 92, 92)
 
-.works-info-block-p
+.works__info__p
   font-size: 18px
   font-family: "Roboto" , sans-serif
 
-.works-info-block-p--text
+.works__info__p_text
   color: rgb(92, 92, 92)
 
 /*contactsBlock
 
-.contacts-block
+.contacts
   width: 100%
   background-image: url('/img/bg_contact.png')
   background-size: 100% 100%
@@ -266,7 +266,7 @@ header
   padding-bottom: 145px
   color: white
 
-.h3
+.contacts__h3
   text-align: center
   font-size: 30px
   font-family: "Roboto" , sans-serif
@@ -275,7 +275,7 @@ header
   text-transform: uppercase
   letter-spacing: 4px
 
-.contacts-block-p
+.contacts__p
   width: 750px
   margin: 0 auto
   margin-top: 10px
@@ -285,7 +285,7 @@ header
   color: rgb(255, 255, 255)
   line-height: 2
 
-.contacts-form-mail
+.contacts__form__email
   color: white
   width: 590px
   border: 2px solid white
@@ -297,19 +297,26 @@ header
   outline: none
   margin-right: 25px
 
-\::-webkit-input-placeholder, ::-moz-placeholder, :-moz-placeholder, :-ms-input-placeholder
+::-webkit-input-placeholder
   color: white
   padding-left: 20px
-
+::-moz-placeholder
+  color: white
+  padding-left: 20px
+:-moz-placeholder
+  color: white
+  padding-left: 20px
+:-ms-input-placeholder
+  color: white
+  padding-left: 20px
 /* webkit
 /* Firefox 19+
 /* Firefox 18-
 /* IE
-
-.contacts-form-mail:focus
+.contacts__form__email:focus
   border-color: white
 
-.contacts-form-submit
+.contacts__form__submit
   color: #FD8C2C
   background: white
   border: none
@@ -328,7 +335,7 @@ header
     -o-transition: 0.6s
     transition: 0.6s
 
-.contacts-block-form
+.contacts__form
   width: 840px
   margin: 0 auto
   margin-top: 90px
@@ -347,10 +354,10 @@ footer
     font-family: "Roboto" , sans-serif
     color: rgb(92, 92, 92)
 
-.soc-icons-footer
+.footer__icons
   float: right
 
-.soc-icons-footer-span
+.footer__icons__span
   margin-right: 20px
   &:nth-child(3)
     margin-right: 0px
@@ -359,73 +366,73 @@ footer
 
 /*media
 @media (max-width: 1349px)
-  .header-xxl-menu ul li
+  .nav__item
     font-size: 13px
 
 @media (max-width: 1234px)
-  .header-info
+  .header__info
     width: 55%
-  .contacts-block-p
+  .contacts__p
     width: 90%
-  .contacts-block-form
+  .contacts__form
     width: 90%
     text-align: center
-  .contacts-form-mail
+  .contacts__form__email
     width: 57%
 
 @media (max-width: 1132px)
-  .header-xxl-menu
+  .header__nav
     display: none
-  .xs-menu
+  .header__xs__menu
     display: block
-  .header-logo
+  .header__logo
     float: left
-  .headerImage
+  .header__image
     width: 250px
     margin-top: 220px
 
 @media (max-width: 985px)
-  .contacts-form-mail
+  .contacts__form__email
     width: 100%
     margin-right: 0px
-  .contacts-form-submit
+  .contacts__form__submit
     margin-top: 50px
 
 @media (max-width: 917px)
-  .works-info-block
+  .works__info
     width: 45%
     &:nth-child(3n+2)
       margin-right: 3.5%
-  .header-info
+  .header__info
     width: 100%
     margin-top: 50px
-  .headerImage
+  .header__image
     display: none
 
 @media (max-width: 699px)
   .container
     width: 100%
-  .header-logo
+  .header__logo
     margin-left: 20px
-  #menu-burger
+  .header__xs__menu__burger
     margin-right: 20px
-  .works-info-block-p
+  .works__info__p
     padding-left: 10px
     padding-right: 10px
-  .works-info-block
+  .works__info
     width: 100%
-  .header-info
+  .header__info
     width: 90%
     margin-left: 20px
     text-align: center
-  .big-button
+  .big__button
     margin: 0 auto
     margin-bottom: 50px
-  .copy
+  .small__text
     display: block
     margin: 0 auto
     width: 220px
-  .soc-icons-footer
+  .footer__icons
     float: none
     width: 110px
     margin: 0 auto

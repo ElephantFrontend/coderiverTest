@@ -37,48 +37,32 @@ navitems: [
 {% block content %}
 	{# partial example #}
 	{% include "partials/_header.html" %}
-<!-- 	{# variable example #}
-	<h1>{{title}}</h1> -->
+
 <!-- worksBlock -->
-           <section class="works-block">
+           <section class="works">
              <div class="container">
-              <p class="subtitle">how it works</p>
-                <h1 class="h1">Lorem ipsum is simply</h1>
+              <p class="works__subtitle">how it works</p>
+                <h1 class="works__h1">Lorem ipsum is simply</h1>
                 {% for item in navitems %}
-                  <div class="works-info-block">
-                     <img class="works-info-block-img" src="{{item.img}}" alt="">
-                       <p class="works-info-block-p works-info-block-p--title"><a href="#">{{item.caption}}</a></p>
-                     <p class="works-info-block-p works-info-block-p--text">{{item.text}}</p>
+                  <div class="works__info">
+                     <img class="works__info__img" src="{{item.img}}" alt="">
+                       <p class="works__info__p works__info__p_title"><a href="#">{{item.caption}}</a></p>
+                     <p class="works__info__p works__info__p_text">{{item.text}}</p>
                   </div>
                   {% endfor %}
                         <div class="clear"></div>
                 </div>
             </section>
 			<!-- contactsBlock -->
-              <section class="contacts-block">
+              <section class="contacts">
                <div class="container">
-                <h3 class="h3">receive notification now</h3>
-                <p class="contacts-block-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor.</p>
-                <form class="contacts-block-form">
-                      <input class="contacts-form-mail" type="email" name="email" placeholder="Your email address ...">
-                      <input class="contacts-form-submit" type="submit" name="submit" value="I'M READY!">
+                <h3 class="contacts__h3">receive notification now</h3>
+                <p class="contacts__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor.</p>
+                <form class="contacts__form">
+                      <input class="contacts__form__email" type="email" name="email" placeholder="Your email address ...">
+                      <input class="contacts__form__submit" type="submit" name="submit" value="I'M READY!">
                 </form>
                 </div>
               </section>
-	
-	
-
-<!-- 	{# mixin example #}
-	{{mixins.icon('facebook')}}
-
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
-{# partial example #} -->
 	{% include "partials/_footer.html" %}
 {% endblock %}

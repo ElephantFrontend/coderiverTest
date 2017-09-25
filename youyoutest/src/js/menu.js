@@ -1,7 +1,7 @@
-	$('#menu-burger').click(function() {
+	$('.header__xs__menu__burger').click(function() {
   var overlayMenu = $('#overlay-menu'),
-      menuIconLines = $('#menu-burger .menu-icon'),
-      menuBurger = $('#menu-burger');
+      menuIconLines = $('.header__xs__menu__burger .header__xs__menu__burger__icon'),
+      menuBurger = $('.header__xs__menu__burger');
   
   if(overlayMenu.hasClass('open')) {
     overlayMenu.removeClass('open');
