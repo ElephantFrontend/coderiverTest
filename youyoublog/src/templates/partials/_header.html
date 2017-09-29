@@ -1,0 +1,39 @@
+<div class="container">
+<header>
+	<a class="logo" href="#">JET<span>RO</span></a>
+	<nav class="header__nav">
+		<ul class="header__ul">
+		   {% for item in menu %}
+			<li class="header__li"><a class="header__a {{item.active}}" href="{{item.link}}">{{item.menu}}</a></li>
+		   {% endfor %}
+		</ul>
+	</nav>
+
+	<div class="xs-menu">
+<div class="xs-menu__burger">
+  <span class="xs-menu__icon"></span>
+</div>
+<div class="overlay-menu">
+<nav class="xs-menu__nav">
+  <ul>
+    {% for item in menu %}
+       <li class="xs-menu__item"><a class="xs-menu__nav {{item.active}}" href="{{item.link}}">{{item.menu}}</a></li>
+    {% endfor %}
+  </ul>
+</nav>  
+</div>
+</div>
+
+<div class="clear"></div>
+</header>
+</div>
+
+<div class="header-line">
+<div class="header-left"></div>
+<div class="header-info">
+	<h2 class="caption">blog</h2>
+</div>
+<div class="header-right"></div>
+<div class="clear"></div>
+</div>
+

@@ -1,0 +1,429 @@
+*
+  margin: 0px
+  padding: 0px
+
+@mixin bebas_neue
+   font-family: 'bebas_neue',sans-serif
+@font-face
+   font-family: 'bebas_neue'
+   src: url('/fonts/bebas_neue.woff')
+
+@mixin bebasneue_bold
+  font-family: 'bebasneue_bold',sans-serif
+@font-face
+  font-family: 'bebasneue_bold'
+  src: url('/fonts/bebasneue_bold.woff')
+
+@mixin bebasneue_book
+  font-family: 'bebasneue_book',sans-serif
+@font-face
+  font-family: 'bebasneue_book'
+  src: url('/fonts/bebasneue_book.woff')
+
+@mixin bebasneue_light
+  font-family: 'bebasneue_light',sans-serif
+@font-face
+  font-family: 'bebasneue_light'
+  src: url('/fonts/bebasneue_light.woff')
+
+@mixin bebasneue_regular
+  font-family: 'bebasneue_regular',sans-serif
+@font-face
+  font-family: 'bebasneue_regular'
+  src: url('/fonts/bebasneue_regular.woff')
+
+@mixin bebasneue_thin
+  font-family: 'bebasneue_thin',sans-serif
+@font-face
+  font-family: 'bebasneue_thin'
+  src: url('/fonts/bebasneue_thin.woff')
+
+.clear
+  float: none
+  clear: both
+
+.container
+  width: 67%
+  margin: 0 auto
+  +r(899)
+     width: 70%
+     +r(599)
+        width: 95%
+
+.hr
+ width: 100%
+ height: 13px
+ background-image: url('/icons/dots.png')
+
+.hr_article
+  margin-top: 50px
+
+/*header*/
+header
+  background: white
+  height: 50px
+  width: 100%
+  margin-top: 15px
+
+.logo
+  color: #e8603c
+  text-decoration: none
+  font-size: 45px
+  font-weight: 400 
+  @include bebas_neue
+
+.logo span
+  color: #f3af9d  
+
+.header__nav
+  float: right
+  margin-top: 19px
+  +r(1132)
+    display: none
+
+.header__li
+  display: inline-block
+
+.header__a
+  text-decoration: none
+  color: #b9b9b9
+  font-size: 20px
+  font-weight: 400
+  text-transform: uppercase
+  margin-left: 28px
+  @include bebas_neue
+  &:hover
+    color: #f3af9d
+
+._active
+  color: #e8603c
+
+.header-left
+  background: #f3af9d
+  height: 61px
+  width: 15.7%
+  margin-top: 15px
+  margin-bottom: 24px
+  float: left
+  +r(899)
+     display: none
+
+.header-info
+  background: #e8603c
+  height: 61px
+  width: 67%
+  margin-top:  15px
+  margin-bottom: 24px
+  margin-left: 0.8%
+  float: left
+  +r(899)
+     width: 100%
+     margin-left: 0
+
+.header-right
+  background: #f3af9d
+  height: 61px
+  width: 15.7%
+  margin-top:  15px
+  margin-bottom: 24px
+  float: right
+  +r(899)
+     display: none
+
+.caption
+  color: white
+  text-transform: uppercase
+  font-size: 31px
+  font-weight: 400
+  padding-left: 19px
+  padding-top: 13px
+  @include bebas_neue
+
+/*adaptivMenu*/
+
+.xs-menu
+  display: none
+  float: right
+  +r(1132)
+    display: block
+
+.xs-menu__burger
+  width: 50px
+  height: 50px
+  background: #e8603c
+  border-radius: 50%
+  position: relative
+  cursor: pointer
+  z-index: 200
+
+.xs-menu__icon
+  display: block
+  height: 2px
+  width: 18px
+  background: #fff
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-left: -9px
+  margin-top: -1px
+  &:after
+    content: ''
+    display: block
+    height: 2px
+    width: 18px
+    background: #fff
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -9px
+    margin-top: -5px
+    transition: 0.35s
+  &:before
+    content: ' '
+    display: block
+    height: 2px
+    width: 18px
+    background: #fff
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -9px
+    margin-top: 4px
+    transition: 0.35s
+  &.open
+    &:before
+      transform: rotate(45deg)
+      margin-top: -1px
+      background: #000
+    &:after
+      transform: rotate(-45deg)
+      margin-top: -1px
+      background: #000
+
+.xs-menu__burger.open, .xs-menu__icon.open
+  background: #f3af9d
+
+.overlay-menu
+  position: fixed
+  top: 0
+  background: #000
+  height: 100%
+  width: 100%
+  opacity: 0.85
+  z-index: 100
+  right: -100%
+  transition: 0.35s
+  &.open
+    right: 0%
+
+.xs-menu__nav
+  height: 60%
+  position: relative
+  top: 50%
+  left: 0
+  transform: translateY(-50%)
+  font-size: 32px
+  text-align: center
+  ul
+    display: inline-block
+    margin: auto
+    height: 100%
+    li
+      position: relative
+      color: #fff
+      margin-bottom: 20px
+      a
+        color: #fff
+        text-decoration: none
+        text-transform: uppercase
+        font-family: "Roboto" , sans-serif
+        &:after
+          content: ' '
+          display: block
+          position: absolute
+          top: 100%
+          left: 0
+          height: 3px
+          width: 0%
+          background: #fff
+          transition: 0.25s
+        &:hover:after
+          width: 100%
+
+/*blogContent*/
+.blog-content
+  float: left
+  width: 100%
+
+.blog__news
+  width: 70%
+  float: left
+  +r(899)
+     width: 100%
+
+.icon-block
+  position: absolute
+  left: -85px
+  background: #e8603c
+  height: 75px
+  width: 75px
+  float: left
+  line-height: 70px
+  +r(599)
+     display: none
+
+.icon-block img
+  vertical-align: middle
+  margin-left: 23px
+
+.img-block
+  width: 100%
+  margin-bottom: 25px
+
+.img-block img
+  width: 100%
+  height: 100%
+
+.h2
+  color: #e8663c
+  font-size: 18px
+  font-weight: 400
+  text-transform: uppercase
+
+.h2 a
+  text-decoration: none
+  color: #e8663c
+  &:hover
+    color: #f3af9d
+
+.article__link
+  color: #a0a0a0
+  font-size: 12px
+  font-weight: 400
+  text-decoration: none
+  font-family: "Helvetica Neue", sans-serif
+
+.article__text
+  color: #414141
+  font-size: 12px
+  font-weight: 400
+  margin-top: 23px
+  font-family: "Helvetica Neue", sans-serif
+
+.article__quote
+  width: 100%
+  background-color: #f5f5f5
+  padding-top: 25px
+  padding-bottom: 25px
+  padding-left: 30px
+  padding-right: 30px
+
+.quote__icon
+  width: 25px
+  height: 20px
+  display: block
+  float: left
+
+.quote__p
+  color: #474747
+  font-size: 13px
+  font-family: "Helvetica Neue", sans-serif
+  font-style: italic
+  line-height: 18px
+  float: right
+  width: 93%
+
+.article__nav
+  width: 20%
+  float: left
+  +r(599)
+     display: none
+
+.article__info
+  width: 80%
+  float: left
+
+.article__h3
+  text-transform: uppercase
+  color: #e8603c
+  font-size: 12px  
+  line-height: 20px
+  @include bebas_neue
+
+.article__nav__p
+  color: #bababa
+  font-size: 12px
+  line-height: 20px
+  font-family: "Helvetica Neue", sans-serif
+
+.article
+  position: relative
+  width: 100%
+  margin-bottom: 57px
+
+/*navbar*/
+.navbar
+  width: 26%
+  float: right
+  +r(899)
+     display: none
+
+.h4
+  display: inline-block
+  vertical-align: top
+  text-transform: uppercase
+  position: relative
+  bottom: 2px
+  color: #e8603c
+  font-size: 16px
+  font-weight: 400
+  background: white
+  padding-right: 17px
+  @include bebas_neue
+
+.navbar__h4
+  margin-bottom: 20px
+
+.navbar__block
+  margin-bottom: 37px
+
+.gellery__block
+  width: 22%
+  height: 50px
+  background: #f3af9d
+  float: left
+  margin-right: 2% 
+  margin-top: 2%
+
+.navbar__categories a
+  text-decoration: none
+  color: #464646
+  font-size: 12px
+  font-weight: 400
+  font-family: "Helvetica Neue", sans-serif
+  &:hover
+    color: #f3af9d
+
+/*pagination*/
+
+.pagination
+  margin-bottom: 50px
+
+.pagination__li
+  display: inline-block
+  width: 26px
+  height: 26px
+  background: #f3b29d
+  cursor: pointer
+  &:hover
+    background: #e8663c
+
+.pagination__a
+  color: white
+  text-decoration: none
+  font-size: 14px
+  line-height: 30px
+  padding-left: 9px
+
+.pagination_active
+  background: #e8603c
