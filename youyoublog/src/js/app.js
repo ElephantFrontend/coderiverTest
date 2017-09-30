@@ -1,3 +1,6 @@
-import sayHello from './lib/sayHello.js';
+import {TweenMax, Power2, TimelineLite} from 'gsap';
+import './animation.js';
 
-sayHello();
+
+
+
