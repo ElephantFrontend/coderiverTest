@@ -2,46 +2,12 @@
   margin: 0px
   padding: 0px
 
-@mixin bebas_neue
-   font-family: 'bebas_neue',sans-serif
-@font-face
-   font-family: 'bebas_neue'
-   src: url('/fonts/bebas_neue.woff')
-
-@mixin bebasneue_bold
-  font-family: 'bebasneue_bold',sans-serif
-@font-face
-  font-family: 'bebasneue_bold'
-  src: url('/fonts/bebasneue_bold.woff')
-
-@mixin bebasneue_book
-  font-family: 'bebasneue_book',sans-serif
-@font-face
-  font-family: 'bebasneue_book'
-  src: url('/fonts/bebasneue_book.woff')
-
-@mixin bebasneue_light
-  font-family: 'bebasneue_light',sans-serif
-@font-face
-  font-family: 'bebasneue_light'
-  src: url('/fonts/bebasneue_light.woff')
-
-@mixin bebasneue_regular
-  font-family: 'bebasneue_regular',sans-serif
-@font-face
-  font-family: 'bebasneue_regular'
-  src: url('/fonts/bebasneue_regular.woff')
-
-@mixin bebasneue_thin
-  font-family: 'bebasneue_thin',sans-serif
-@font-face
-  font-family: 'bebasneue_thin'
-  src: url('/fonts/bebasneue_thin.woff')
-
-
-.clear
-  float: none
-  clear: both
++font(bebas_neue,'bebas_neue')
++font(bebasneue_bold,'bebasneue_bold')
++font(bebasneue_book,'bebasneue_book')
++font(bebasneue_light,'bebasneue_light')
++font(bebasneue_regular,'bebasneue_regular')
++font(bebasneue_thin,'bebasneue_thin')
 
 .container
   width: 67%
@@ -59,7 +25,6 @@
 .hr_article
   margin-top: 50px
 
-// header
 header
   background: white
   height: 50px
@@ -72,7 +37,7 @@ header
   text-decoration: none
   font-size: 45px
   font-weight: 400 
-  @include bebas_neue
+  font-family: "bebas_neue" , sans-serif
 
 .logo span
   color: #f3af9d  
@@ -93,7 +58,7 @@ header
   font-weight: 400
   text-transform: uppercase
   margin-left: 28px
-  @include bebas_neue
+  font-family: "bebas_neue" , sans-serif
   &:hover
     color: #f3af9d
 
@@ -139,7 +104,7 @@ header
   font-weight: 400
   padding-left: 19px
   padding-top: 13px
-  @include bebas_neue
+  font-family: "bebas_neue" , sans-serif
 
 // adaptivMenu
 
@@ -238,7 +203,7 @@ header
         color: #fff
         text-decoration: none
         text-transform: uppercase
-        font-family: "Roboto" , sans-serif
+        font-family: "bebas_neue" , sans-serif
         &:after
           content: ' '
           display: block
@@ -345,12 +310,19 @@ header
   width: 80%
   float: left
 
+.clearfix:after 
+  visibility: hidden
+  display: block
+  content: ""
+  clear: both
+  height: 0
+
 .article__h3
   text-transform: uppercase
   color: #e8603c
   font-size: 12px  
   line-height: 20px
-  @include bebas_neue
+  font-family: "bebas_neue" , sans-serif
 
 .article__nav__p
   color: #bababa
@@ -381,7 +353,7 @@ header
   font-weight: 400
   background: white
   padding-right: 17px
-  @include bebas_neue
+  font-family: "bebas_neue" , sans-serif
 
 .navbar__h4
   margin-bottom: 20px

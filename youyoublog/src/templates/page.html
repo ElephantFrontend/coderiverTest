@@ -76,7 +76,10 @@ pagination: [
 
 	<div class="container">
 	<div class="blog-content">
+	<!-- * blog__news *  -->
 	  <div class="blog__news">
+
+	  <!-- * article *  -->
           <div class="article">
              <div class="icon-block js-emergence_left">
 	    	    <img src="icons/files.png" alt="">
@@ -88,6 +91,7 @@ pagination: [
                     <div><img src="img/slider_one.png" alt=""></div>
                 </div>
 	         </div>
+	         <div class="article-block clearfix">
 	         <div class="article__nav">
 	         	<h3 class="article__h3">date</h3>
 	         	<p class="article__nav__p">{{date}}</p>
@@ -101,10 +105,9 @@ pagination: [
              <p class="article__text">Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei. Ne eos vidisse splendide instructior. Mei no latine praesent forensibus, te sed habemus tacimates, ad ipsum officiis constituto usu. </p>
               <p class="article__text">Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posuere ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis ...</p>
 	         </div>
-            <div class="clear"></div>
+	         </div>
             <div class="hr hr_article"></div>
 	      </div>
-        <div class="clear"></div>
 
           <div class="article">
         	 <div class="icon-block js-emergence_left">
@@ -113,38 +116,36 @@ pagination: [
              <div class="img-block">
 	         	<img src="img/jesus.png" alt="">
 	         </div>
-	         <div class="article__nav">
+	         <div class="article-block clearfix">
+	         <section class="article__nav">
 	         	<h3 class="article__h3">date</h3>
 	         	<p class="article__nav__p">{{date}}</p>
 	         	<h3 class="article__h3">tags</h3>
 	         	<p class="article__nav__p">{{tags}}</p>
 	         	<h3 class="article__h3">comments</h3>
 	         	<p class="article__nav__p">{{comments}}</p>
-	         </div>
-	         <div class="article__info">
+	         </section>
+	         <section class="article__info">
 	         	<h2 class="h2"><a href="#">Jesus Typography Wallpaper Giveaway!</a></h2>
              <p class="article__text">Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei. Ne eos vidisse splendide instructior. Mei no latine praesent forensibus, te sed habemus tacimates, ad ipsum officiis constituto usu. </p>
               <p class="article__text">Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posuere ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis ...</p>
-	         </div>
-            <div class="clear"></div>
+	         </section>
+            </div>
             <div class="hr hr_article"></div>
           </div>
-        <div class="clear"></div>
 
-          <div class="article">
+          <section class="article">
              <div class="icon-block js-emergence_left">
         	   <img src="icons/brackets.png" alt="">
              </div>
-             <div class="article__quote">
+             <div class="article__quote clearfix">
              <img class="quote__icon" src="icons/brackets_orange.png" alt="">
              	<p class="quote__p">Write anything you want here in this quotable area. Something unique you want people to learn about your website or some cool random fact. Its totally up to you. Write anything you want here in this quotable area. Something unique you want people to learn about your website or some cool random fact. Its totally up to you.</p>
-             	<div class="clear"></div>
              </div>
              <div class="hr hr_article"></div>
-          </div>
-        <div class="clear"></div>
+          </section>
 
-          <div class="article">
+          <section class="article">
         	 <div class="icon-block js-emergence_left">
         	   <img src="icons/link.png" alt="">
              </div>
@@ -152,15 +153,32 @@ pagination: [
              <a class="article__link">www.bestpsdfreebies.com</a>
              <p class="article__text">Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei.</p>
              <div class="hr hr_article"></div>
-          </div>
+          </section>
+          <!-- * /article *  -->
+
+         <!-- * pagination *  -->
+          <div class="pagination">  
+            <nav class="pagination__nav">
+	            <ul class="pagination__ul">
+	            {% for item in pagination %}
+		           <li class="pagination__li {{item.active}}"><a class="pagination__a" href="{{item.link}}">{{item.pagination}}</a></li>
+		        {% endfor %}
+	            </ul>
+	        </nav>
+        </div>
+        <!-- * /pagination *  -->
+
       </div>
+      <!-- * /blog__news *  -->
+       
+       <!-- * navbar *  -->
       <div class="navbar">
           <div class="navbar__block">
       	 <div class="hr navbar__h4"><h4 class="h4">AbouT Jetro</h4></div>
       	 <p class="article__text _jetro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praese nt libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elemen tum imperdiet. Duis sagittis ipsum.</p>
       	 </div>
       	 <div class="navbar__block">
-      	    <div class="hr navbar__h4"><h4 class="h4">Categories</h4></div>
+      	    <section class="hr navbar__h4"><h4 class="h4">Categories</h4></section>
                 <nav class="navbar__categories">
       	          <ul>
       	            {% for item in categories %}
@@ -170,7 +188,7 @@ pagination: [
       	  </nav>
       	 </div>
       	 <div class="navbar__block">
-      	    <div class="hr navbar__h4"><h4 class="h4">Photo Gallery</h4></div>
+      	    <section class="hr navbar__h4"><h4 class="h4">Photo Gallery</h4></section>
       	       <div class="navbar__gellery">
       	           <div class="gellery__block js-emergence_coup"></div>
                    <div class="gellery__block js-emergence_coup"></div>
@@ -181,19 +199,10 @@ pagination: [
                    <div class="gellery__block js-emergence_coup"></div>
                    <div class="gellery__block js-emergence_coup"></div>
                </div>
-         <div class="clear"></div>
       	 </div>
       </div>
-       <div class="clear"></div>
-        <div class="pagination">  
-            <nav class="pagination__nav">
-	            <ul class="pagination__ul">
-	            {% for item in pagination %}
-		           <li class="pagination__li {{item.active}}"><a class="pagination__a" href="{{item.link}}">{{item.pagination}}</a></li>
-		        {% endfor %}
-	            </ul>
-	        </nav>
-        </div>
+      <!-- * navbar *  -->
+
     </div>
 </div>
 {% endblock %}
